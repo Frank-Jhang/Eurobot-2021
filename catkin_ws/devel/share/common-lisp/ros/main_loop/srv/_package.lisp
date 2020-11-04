@@ -1,0 +1,20 @@
+(cl:defpackage main_loop-srv
+  (:use )
+  (:export
+   "ADDTWOINTS"
+   "<ADDTWOINTS-REQUEST>"
+   "ADDTWOINTS-REQUEST"
+   "<ADDTWOINTS-RESPONSE>"
+   "ADDTWOINTS-RESPONSE"
+   "GOAP_"
+   "<GOAP_-REQUEST>"
+   "GOAP_-REQUEST"
+   "<GOAP_-RESPONSE>"
+   "GOAP_-RESPONSE"
+   "PATH"
+   "<PATH-REQUEST>"
+   "PATH-REQUEST"
+   "<PATH-RESPONSE>"
+   "PATH-RESPONSE"
+  ))
+
