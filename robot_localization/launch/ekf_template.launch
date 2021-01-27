@@ -1,0 +1,31 @@
+<launch>
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_global" clear_params="true">
+    <rosparam command="load" file="$(find robot_localization)/params/ekf_template_global.yaml" />
+    <!--
+    Placeholder for output topic remapping 
+    <remap from="accel/filtered" to=""/>
+    -->
+    <remap from="odometry/filtered" to="global_filter"/>
+  
+  </node> 
+
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_local" clear_params="true">
+    <rosparam command="load" file="$(find robot_localization)/params/ekf_template_local.yaml" />
+    <!--  
+    Placeholder for output topic remapping
+    <remap from="accel/filtered" to=""/>
+    -->
+    <remap from="odometry/filtered" to="local_filter"/>
+  </node>
+
+  <node pkg="robot_localization" type="initial_pose" name="initial_pose" clear_params="true">
+  </node>
+
+  <include file="$(find robot_setup_tf)/launch/turtlebot3_eurobot.launch"/>
+
+  <include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch"/>
+
+  <!--
+  <node pkg="tf" type="static_transform_publisher" name="global_static" args="0 0 0 0 0 0 map odom 100"/>
+  -->
+</launch>
