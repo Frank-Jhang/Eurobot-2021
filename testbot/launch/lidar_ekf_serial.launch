@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="testbot" name="planner_to_ST" type="planner_to_ST" output="screen" />
+    <!--
+    <node pkg="serial_port" name="serial_port" type="serial_port_node" output="screen" />
+    
+    <include file="$(find ydlidar_ros)/launch/G6.launch" />
+    -->
+    <node pkg="testbot" name="odometry_test" type="odometry_test" output="screen" />
+ </launch>

@@ -1,0 +1,5 @@
+<launch>
+  <!--goal_pose-->
+  <node pkg="testbot" name = "goal_pose" type = "goal_pose"  output="screen" >
+  </node>
+</launch>
