@@ -25,7 +25,7 @@ int main(int argc, char **argv){
     std_msgs::Int32MultiArray toST_info;
 
 
-    bool initial_state = true;
+    bool initial_state = true;  // 'true' to set the initial pose at ST 
     float p_init_x;
     float p_init_y;
     float p_init_yaw;
